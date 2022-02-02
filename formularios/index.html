@@ -1,0 +1,23 @@
+<!--página inicial del proyecto, en la que me da la opción de elegir el idioma-->
+<!--Las cookies solo se guardan  en firefox, en los demás buscadores me da problemas,
+    en firefox una vez elegido el idioma sio se cierra el buscador en la siguiente vez que abro index.html la página
+que se abre es directamente la elegida, pero si cierro el buscador no se guarda el idioma y me lo vulve a preguntar
+sin enbargo en internet explorer , desbloqueo los elemwnto y sale directamente la página de euskera-->
+<!DOCTYPE html>
+<html>
+    <head>
+   <title>Eligiendo idioma</title>
+   <link rel="stylesheet" href="estilo.css" />
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Idiomas disponibles</h1>
+    <!--botones para elegir idioma al realizar click sobre ellos se invoca la función elegirIdioma-->
+    <div id="botones">
+    <button id="boton1" onclick="crearCookie('castellano')"><h2>Castellano</h2></button>
+    <button id="boton2" onclick="crearCookie('euskera')"><h2>Euskera</h2></button>
+    </div>
+     <!--enlace al script-->
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

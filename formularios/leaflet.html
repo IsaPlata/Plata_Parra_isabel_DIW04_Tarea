@@ -1,0 +1,43 @@
+<!--página que muestra el mapa de localización de zona estella con un marcador en politécnico Estella-->
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <head>
+       
+        <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script> <!-- script a la librería de leaflet-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" /><!--enlace a hoja de estilo de leaflet-->
+    <!--estilo con dimensiones de el lugar de muestra del mapa -->
+     <style>
+      #map { 
+      width: 580px;
+      height: 630px; } 
+     </style>
+     
+     </head>
+      <body>
+          <!-- lugar donde se situará el mapa -->
+         <div id="map"></div>
+          <script>
+             //variable con coordenadas de mapa a mostrar y el zoom necesario
+              var map = L.map('map').
+              setView([ 42.67,-2.03 ], 
+              14);
+             //teselas para crear enlaces  diferentes  páginas donde obtener informaciónes
+              L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+              maxZoom: 18
+              }).addTo(map);
+    
+              L.control.scale().addTo(map);//muestra la escala del centro actual de la pantalla en sistemas métricos (m/km) e imperiales (mi/ft).
+             //variable en la que guarda la ubicación del instituto, titulo , no desplazable, y opacidad
+              var politecnico = L.marker([42.674615536259864, -2.0291927460301333], {
+              title: "CI Politécnico Estella",
+              draggable:false,
+              opacity: 1
+              }).addTo(map);//añado el punto a el mapa
+
+           </script>
+     </body> 
+</html>
+
+    

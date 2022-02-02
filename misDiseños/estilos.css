@@ -1,0 +1,123 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+p{color: rgb(29, 36, 61);
+    margin: -0.5em;
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    background-image: linear-gradient(rgba(66, 66, 25, 0.774), rgb(65, 108, 114));
+
+}
+.todo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    margin-top: 4em;
+    
+    
+}
+.toallas{
+  
+    border-color:darkcyan;
+    
+    display: flex;
+    
+ flex-direction: column;
+align-items: center;
+
+  }
+
+  .vacio,.l{
+      width:auto;
+    
+    
+     align-items: center;
+  }
+ 
+.diseño{
+    width: 18%; 
+    height: 23%;
+    margin: 10px;
+    padding: 20px;  
+   
+}
+
+.javi,.aitana{
+    width: 35%; 
+    margin: 10px;
+    padding: 20px;     
+}
+#cuadro1, #cuadro2, #cuadro3, #papelera{
+    float: left;
+    width: 180px;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  #cuadro1{
+    background: rgb(100, 114, 240);
+  }
+  
+  #cuadro2 {
+    background: rgb(24, 60, 114);
+  }
+  
+  #cuadro3 {
+    background: #f55;
+  }
+  
+  #papelera {
+    background: #5ff;
+  }
+  
+  .cuadradito{
+    background: #288;
+    border: 2px solid #882;
+    width: 10px;
+    height: 10px;
+    padding: 0 10px 15px;
+    margin: 5px;
+  }
+  
+  #arrastrable1 {
+
+    background-image: url("tuImagen.jpg");
+    border: 2px solid #822;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+  }
+  
+  #arrastrable2 {
+    background-image: url("tuImagen1.jpg");
+    border: 2px solid #822;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+  }
+  
+  #arrastrable3 {
+    background-image: url("tuImagen.jpg");
+    border: 2px solid #822;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+  }
+
+    .img{
+        width: 25px;
+        height: 25px;
+    }
+    h1,p{
+      font-family:cursive;
+
+    }

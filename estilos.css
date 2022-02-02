@@ -1,0 +1,415 @@
+
+/**************************************************************
+* Aplico a todos los elementos border box , para poder calcular bien el tamaño de éstos.
+reseteo las etiquetas de títulos y párrafo a margin 0 padding 0.5
+***************************************************************/
+
+*{
+    box-sizing: border-box;
+}
+
+
+/**************************************************************
+contenedor padre  que tiene a sus hijos en filas no ampliables y centradas
+***************************************************************/
+.contenedorGrande{
+  display: flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+ text-align: center;
+  width:100%;
+ }
+
+/**************************************************************
+* contendor con contendio de dos div en filas indivisibles cada 
+div es una fila que si no cabe se añade otra más
+***************************************************************/
+
+
+.trabajosPrincipal{
+  display: flex;
+  flex-direction:row;
+flex-wrap: nowrap;
+width:100%;
+  
+ }
+ .grupo1{
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  width:100%;
+  
+ }
+ /*las imágenes ocupan entre todas los div con id trab1 el 100% del ancho del contenedor*/
+ .trab1{
+  width:100%;
+  height:100%;
+  border:2px solid rgb(255, 255, 255);
+}
+ 
+
+
+
+
+
+
+/*cada imagen tiene un valor del 50 % del contendedor*/
+.trab{
+  width: 50%;
+}
+
+
+.trabajosPrincipal1{
+display: flex;
+flex-direction: column;
+width: 80%;
+
+
+}
+/* los titulos ocupan un 80% del contenedor*/
+.titulos{
+ padding: 0.2em;
+ border: 2px solid rgb(255, 255, 255);
+ background-color: rgb(94, 48, 94);
+  width:80%;
+}
+/* contiene los titulos del contenedor pequeño en columnas*/
+ .cursosP{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  width:100%;
+  padding: 0.5em;
+
+ }
+/*
+ contenedor hijo principal disposición columnas y al centro en un inicio en pantallas pequeñas
+ */ 
+
+.contenedorPrincipal{
+  padding:2.5px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:80%;
+  margin:auto;
+  margin-top: 1.5em;
+}
+
+ /*
+contenedor hijo pequeño  no visible por el momento
+*/ 
+
+.contenedorPequeño{
+  display: none;
+}
+
+
+/*imagen de presentación */
+.primera{
+  width: 100%;
+  height:100%;
+ 
+}
+
+/**************************************************************
+* tamaño,tipo de letra, color,negrita y posición de cada div dentro
+ de el menú de contenedor principal
+***************************************************************/
+.menu1{
+  font: italic small-caps bold 20px/10px Georgia;
+  padding: 0.5em;
+  text-decoration:none;
+  text-align:left;
+  color:rgb(94, 48, 94);
+}
+
+/**************************************************************
+* tamaño,tipo de letra, color,negrita de clases video y politécnico
+tamaño válido para ambos contenedores
+***************************************************************/
+.video,.politecnico{
+  color:rgb(94, 48, 94);
+  font: italic small-caps bold 20px/10px Georgia;
+text-decoration:none;
+font-size: calc(0.5em + 0.5vw);
+}
+
+/**************************************************************
+* margin y padding para textos con éstas etiquetas
+***************************************************************/
+
+h1,h3,p,p3,p2{
+    margin:0px;
+    padding: 0.5em;
+}
+/**************************************************************
+* color de etiqueta p3 para mostrar en pie de contenedor principal
+***************************************************************/
+
+p3{
+  color:white;
+}
+/**************************************************************
+* color  y tamaño de etiqueta p2 para mostrar en pie de contenedor pequeño
+***************************************************************/
+p2{
+  font: italic  20px/10px Georgia;
+  font-size: calc(0.30em + 0.30vw);color:white;
+  
+}
+
+/**************************************************************
+* tamaño y disposición de div contenedor de header con class cabecero contenedor principal
+***************************************************************/
+.cabecero{
+height: 25%;
+width: 100%;
+margin-top:2em;
+
+}
+/**************************************************************
+* nav con clase barraNavegacion en la que sus hijos de colocarán en columnas en un primer monento
+al definir las pantallas más pequeñas
+***************************************************************/
+ .barraNavegacion {
+  display: flex;
+  flex-direction:column;
+  padding:1em;     
+}
+
+
+
+/**************************************************************
+* texto responsivo recalculando tamaño desde unos tamaños y formato dados inicalmente en
+en clase h1 de cointenedor pequeño
+***************************************************************/
+
+.h1{
+  font: italic small-caps bold 25px/15px Georgia;
+  font-size: calc(0.60em + 0.60vw);
+
+}
+
+
+#ico1{ margin: 0px;
+  padding: 0.2em;}
+
+
+/**************************************************************
+*id para indicar espacio entre los iconos 
+***************************************************************/
+#what,#what1{
+  margin: 0px;
+  padding: 0.2em;
+ 
+}
+/**************************************************************
+*id para indicar color y fondo de icionos dejando a un lado what
+***************************************************************/
+#ico1,#ico2,#ico3,#ico4,.ico{
+  background-color: black;
+ color: white;
+width: 100%;
+
+}
+.iconos{
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items:baseline;
+}
+
+.icopeque{
+  font: italic small-caps bold 15px/5px Georgia;
+  font-size: calc(0.32em + 0.32vw);
+  color: white;
+}
+ /**************************************************************
+*id para indicar  tamaño color y para que esté colocado a la inquierda de su contenedor
+***************************************************************/
+#what,#what1{
+   font-size:20px;
+  color:rgb(233, 227, 227);
+  align-items: flex-start;
+}
+/**************************************************************
+*clase del contenedor de los iconos los que he colocado en fila 
+***************************************************************/
+.ico{
+  background: black;
+  display: flex;
+flex-direction :row;
+flex-wrap: nowrap;
+
+}
+/**************************************************************
+clase colocada en columnas para que el pié tenga los datos uno debajo de otro
+***************************************************************/
+
+.pie{
+background: black;
+display: flex;
+flex-direction :column;
+align-items:flex-start;
+justify-content:flex-start;
+border:  black;
+border: 8px solid black;
+
+}
+
+
+
+
+/**************************************************************
+*media querie que indica se aplicará cuando el tamaño de pantalla sea al menos 576 px
+***************************************************************/
+
+  @media screen and (min-width:576px) {
+    
+
+
+ /**************************************************************
+*cambio en contenedor principal tiene un archo del 90%del contenedor grande
+***************************************************************/
+    .contenedorPrincipal
+    {
+      width:90%;
+     }
+  /**************************************************************
+*cambio disposición de menú en contenedor principal, pasa a estar en fila y centrado
+***************************************************************/
+    #menu{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:nowrap;
+      padding: 0.5em;
+      justify-content:center;
+      width: 100%;
+       
+     }
+  
+
+    /**************************************************************
+*cambio en clase menu1 del contenedor principal para da más visión a los enalces del menú,
+ ya que la pantalla tiene más sitio y así queda mejor  mi juicio
+***************************************************************/
+   .menu1{
+   font: italic small-caps bold 25px/15px Georgia;
+   font-size: calc(0.80em + 0.80vw);
+   line-height: 0em;
+   padding: 0.3em;
+   margin: 0.3em;
+   text-decoration:none;
+   }
+ 
+  /* las imagenes de los trabajos están en un contenedor trabajosPrincipal dispuesto en row
+  Al que le dejo pasar de fila si lo necesita en el tengo dos div que son columana1*/
+
+  #trab1{
+    width:100%;
+    height: 100%;
+    border: 2px solid rgb(255, 255, 255);
+  }
+  /*este copntenedor  tiene los gripos de fotros, estos grupos están en filas y si no
+  caben se pueden pasar a la siguiente*/
+  .trabajosPrincipal{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width:100%;
+    
+   }
+   /*eñl grupo tiene las fotos  en fila y no pueden pasar de ésta*/
+   .grupo1{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+   }
+   /*contiene los titulos y no pueden pasar de su fila*/
+   .cursos{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+   }
+   /*los titulos miden cada uno 50% del contenedor cursos*/
+   .titulos{
+    padding: 0.2em;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(94, 48, 94);
+    width:50%;
+   }
+  }
+
+/**************************************************************
+*media querie que indica se aplicará cuando el tamño de pantalla sea al menos 800 px
+***************************************************************/
+    @media (min-width: 800px) {
+  
+/**************************************************************
+*el contenedor pequeño se hace visible con un 22% de ancho del contenedor grande
+ajusto márgenes y le pongo a sus elementos en columna
+***************************************************************/
+   .contenedorPequeño{
+      padding: 10px;
+      display: flex;
+      flex-direction:column;
+      text-align:left;
+      width: 22%;
+     margin-left: 2em;
+     margin-top:6.5em;
+    }
+    /**************************************************************
+*el contenedor principal comparte escenario , ocupa un 70% de ancho del contenedor grnade
+*************************************************************/
+.contenedorPrincipal
+   {
+    width:70%;
+    }
+
+      /**************************************************************
+*clase cabecero para alinear con cabecero de contenedor pequeño
+****************************************************************/
+.cabecero{
+  padding: 2em;
+  margin-top:2em;
+
+}
+
+ /**************************************************************
+* doy un padding para tener bien situado el menú  de nav del contenedor pequeño
+***************************************************************/
+ .barraNavegacion1{
+  padding: 1em;
+  }
+  /**************************************************************
+*doy valores a cabecera1 del contennedor pequeño para alinear con cabecera del contenedor principal
+***************************************************************/
+.cabecero1{
+  justify-content:center;
+  height: 5em;
+  margin-top: -1em;
+}
+/**************************************************************
+*tamaño y color para los enlaces del menú de contendedor pequeño
+***************************************************************/
+.menu11{
+  font: italic small-caps bold 25px/15px Georgia;
+  font-size: calc(0.60em + 0.60vw);
+  color:rgb(94, 48, 94);
+  text-decoration:none;
+}
+.titulos{
+  padding: 0.2em;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(94, 48, 94);
+   width:90%;
+ }
+
+  }
+
+ 
+  
+
+

@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(122, 219, 206);
+  
+    font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: purple;
+    font-size: 24px;
+    }
+  h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif ;
+           width: 100%;
+           position: absolute;
+           top: 300px;
+            text-align:center;
+            
+            
+         } 
+
+#botones{
+    position: relative;
+    top: 425px;
+    text-align:center;
+}
+  
+#boton1,#boton2{
+   
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: purple;
+    background-color: #7b7b81;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;}
+    
+
+    

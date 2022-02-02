@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="estilo.css" /> 
+    <title>página en castellano</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+   <h2>Introduce tu nombre y apellido por favor</h2> 
+   <form name="formulario1"> <!--creo un formulario-->
+    <input type="text" id="insertaNombre" /> <!--creo casilla para introducir datos-->
+  </form>
+  <p>envíar después de rellenar</p>
+  <button type="button"  onclick="escribir()"  > Envíar</button> <!--el botón en el que al hacer click invoca al metodo escribir-->
+  <div id="respuesta1" ></div> <!--espacio donde se hayará la respuesta requerida, el resultado de la función escribir-->
+
+  <h2>Fecha de nacimento</h2> 
+  <form name="formulario2"> <!-- creo un formulario-->
+    <p>día <input id="insertaDia" /></p> <!--casilla para introducir el día-->
+    <p>mes <input id="insertaMes" /></p> <!-- casilla para introducir el mes-->
+    <p>año  <input type="number" id="insertaAño" /></p>   <!--casilla para introducir el año  sólo de tipo numérico, para asegurarme
+     que después el dato es válido para realizar la función -->
+   <button type="button"  onclick="calcularEdad()"  > Calcula tu edad </button> <!-- botón que al realizarle click invoca a la calcularEdad-->
+   <div id="edad" ></div> <!-- espacio donde se hayará la respuesta requerida, el resultado de la función escribir-->
+ </form>
+
+<h2>Número más alto</h2>
+<form name="formulario3">  <!--creo un formulario-->
+  <p>Introduce número 1 <input type="number" id="numero1"/></p> <!--casillas para introducir dato numérico-->
+  <p>Introduce número 2 <input type="number" id="numero2"/></p>  
+  <p>Introduce número 3 <input type="number" id="numero3"/></p>
+  <p>Introduce número 4 <input type="number" id="numero4"/></p>
+  <p>Introduce número 5 <input type="number" id="numero5"/></p>
+  <button type="button"  onclick="calcularMasAlto()"  > Calcula el valor más alto </button> <!--botón que al clickar invoca a la funcion-->
+
+</form>
+
+<h2>Mapa zona Estella</h2>
+ <!--dos botones los cuales abren ventana nueva y ocultan  ventana al realizar click sobre ellos-->
+<button type="button"  onclick="abrirVentana()"  > ver mapa</button>
+<button type="button"  onclick="cerrarVentana()"  > Ocultar mapa</button>
+<!--div id="mapid"></div>//espacio donde se hayará la respuesta requerida, el resultado de la función escribir-->
+    <script type="text/javascript" src="castellano.js"></script>
+
+</body>
+</html>
