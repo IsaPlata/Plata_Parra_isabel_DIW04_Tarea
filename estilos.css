@@ -16,8 +16,8 @@ contenedor padre  que tiene a sus hijos en filas no ampliables y centradas
   display: flex;
   flex-direction:row;
   flex-wrap:nowrap;
- text-align: center;
   width:100%;
+  align-items: flex-start;
  }
 
 /**************************************************************
@@ -25,21 +25,42 @@ contenedor padre  que tiene a sus hijos en filas no ampliables y centradas
 div es una fila que si no cabe se añade otra más
 ***************************************************************/
 
+.main{
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+main p{
 
+  font-size:large;
+
+}
+/*clase para llevar a las imágenes hasta el final del contenedor*/
+.final{
+  width: 92%;
+  margin-left: 0.5em;
+}
 .trabajosPrincipal{
   display: flex;
-  flex-direction:row;
-flex-wrap: nowrap;
+  flex-direction:column;
+
 width:100%;
-  
+
  }
- .grupo1{
+ 
+ .grupo1 {
   display: flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  width:100%;
+  flex-direction:column;
   
+ align-items: center;/*como esta en*/
+ 
  }
+ 
+ a{display:flex;
+width: 100%;
+
+}
+ 
  /*las imágenes ocupan entre todas los div con id trab1 el 100% del ancho del contenedor*/
  .trab1{
   width:100%;
@@ -48,30 +69,30 @@ width:100%;
 }
  
 
-
-
-
-
-
+/*
 /*cada imagen tiene un valor del 50 % del contendedor*/
 .trab{
   width: 50%;
 }
 
-
-.trabajosPrincipal1{
-display: flex;
-flex-direction: column;
-width: 80%;
-
-
+.validador{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+ 
 }
+ 
+
+footer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
 /* los titulos ocupan un 80% del contenedor*/
 .titulos{
- padding: 0.2em;
- border: 2px solid rgb(255, 255, 255);
- background-color: rgb(94, 48, 94);
-  width:80%;
+width:100%;
 }
 /* contiene los titulos del contenedor pequeño en columnas*/
  .cursosP{
@@ -87,13 +108,8 @@ width: 80%;
  */ 
 
 .contenedorPrincipal{
-  padding:2.5px;
-  display:flex;
+   display:flex;
   flex-direction:column;
-  justify-content:center;
-  width:80%;
-  margin:auto;
-  margin-top: 1.5em;
 }
 
  /*
@@ -111,6 +127,11 @@ contenedor hijo pequeño  no visible por el momento
   height:100%;
  
 }
+.primera1{
+ 
+    width: 100%;
+    height: 120%;
+}
 
 /**************************************************************
 * tamaño,tipo de letra, color,negrita y posición de cada div dentro
@@ -120,29 +141,46 @@ contenedor hijo pequeño  no visible por el momento
   font: italic small-caps bold 20px/10px Georgia;
   padding: 0.5em;
   text-decoration:none;
-  text-align:left;
+  text-align:center;
   color:rgb(94, 48, 94);
+  
 }
-
+#menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*así centro el menú del tamaño pequeño de pantalla*/
+a.menu1{
+ justify-content: center;
+/* align-items: ;*/
+}
 /**************************************************************
 * tamaño,tipo de letra, color,negrita de clases video y politécnico
 tamaño válido para ambos contenedores
 ***************************************************************/
-.video,.politecnico{
+.video1,.politecnico1{
   color:rgb(94, 48, 94);
   font: italic small-caps bold 20px/10px Georgia;
 text-decoration:none;
-font-size: calc(0.5em + 0.5vw);
+font-size: calc(0.6em + 0.6vw);
+
+}
+a{
+  display: flex;
+
+}
+/*para centrar el enlace*/
+a.video1,a.politecnico1{
+  justify-content: center;
+}
+/*clase creada para centrar los enlaces*/
+.centra{
+  justify-content: center;
+  display: flex;
 }
 
-/**************************************************************
-* margin y padding para textos con éstas etiquetas
-***************************************************************/
 
-h1,h3,p,p3,p2{
-    margin:0px;
-    padding: 0.5em;
-}
 /**************************************************************
 * color de etiqueta p3 para mostrar en pie de contenedor principal
 ***************************************************************/
@@ -163,9 +201,10 @@ p2{
 * tamaño y disposición de div contenedor de header con class cabecero contenedor principal
 ***************************************************************/
 .cabecero{
-height: 25%;
-width: 100%;
-margin-top:2em;
+
+width: 104%;
+
+
 
 }
 /**************************************************************
@@ -175,10 +214,18 @@ al definir las pantallas más pequeñas
  .barraNavegacion {
   display: flex;
   flex-direction:column;
-  padding:1em;     
+  padding-top: 5%;
+ 
+  
+
 }
 
-
+main{
+  display:flex;
+  flex-direction: column;
+  margin: 1%;
+  
+}
 
 /**************************************************************
 * texto responsivo recalculando tamaño desde unos tamaños y formato dados inicalmente en
@@ -252,10 +299,11 @@ background: black;
 display: flex;
 flex-direction :column;
 align-items:flex-start;
-justify-content:flex-start;
-border:  black;
-border: 8px solid black;
+/*justify-content:flex-start;
+border:  black;*/
+border: 8px solid ;
 
+width: 105%;
 }
 
 
@@ -274,7 +322,7 @@ border: 8px solid black;
 ***************************************************************/
     .contenedorPrincipal
     {
-      width:90%;
+      width:100%;
      }
   /**************************************************************
 *cambio disposición de menú en contenedor principal, pasa a estar en fila y centrado
@@ -296,13 +344,20 @@ border: 8px solid black;
 ***************************************************************/
    .menu1{
    font: italic small-caps bold 25px/15px Georgia;
-   font-size: calc(0.80em + 0.80vw);
+   font-size: calc(0.70em + 0.70vw);
    line-height: 0em;
    padding: 0.3em;
-   margin: 0.3em;
+   margin-left: 20%;
    text-decoration:none;
    }
  
+   main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+    margin-right: 2%;
+  }
+   
   /* las imagenes de los trabajos están en un contenedor trabajosPrincipal dispuesto en row
   Al que le dejo pasar de fila si lo necesita en el tengo dos div que son columana1*/
 
@@ -311,35 +366,39 @@ border: 8px solid black;
     height: 100%;
     border: 2px solid rgb(255, 255, 255);
   }
-  /*este copntenedor  tiene los gripos de fotros, estos grupos están en filas y si no
-  caben se pueden pasar a la siguiente*/
-  .trabajosPrincipal{
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    width:100%;
-    
-   }
-   /*eñl grupo tiene las fotos  en fila y no pueden pasar de ésta*/
-   .grupo1{
-    display: flex;
-    flex-direction:row;
-    flex-wrap:nowrap;
-   }
-   /*contiene los titulos y no pueden pasar de su fila*/
+  /*este copntenedor  tiene las img   estos grupos están en filas y si no
+  caben se pueden pasar a la siguiente y ocupan un 80 % de la anchyra par no llear hasta el final*/
+ 
    .cursos{
 
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
    }
-   /*los titulos miden cada uno 50% del contenedor cursos*/
-   .titulos{
-    padding: 0.2em;
-    border: 2px solid rgb(255, 255, 255);
-    background-color: rgb(94, 48, 94);
-    width:50%;
+  
+
+
+   .trabajosPrincipal{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+  width:100%;
+  
    }
+   
+   .grupo1 {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+   
+   }
+   
+   a{display:flex;
+   width: 50%;
+  
+  }
+ 
+
   }
 
 /**************************************************************
@@ -352,45 +411,47 @@ border: 8px solid black;
 ajusto márgenes y le pongo a sus elementos en columna
 ***************************************************************/
    .contenedorPequeño{
-      padding: 10px;
+      padding: 5px;
       display: flex;
       flex-direction:column;
       text-align:left;
       width: 22%;
-     margin-left: 2em;
-     margin-top:6.5em;
+    
+     margin-right: 2em;
+     
     }
     /**************************************************************
 *el contenedor principal comparte escenario , ocupa un 70% de ancho del contenedor grnade
 *************************************************************/
 .contenedorPrincipal
    {
-    width:70%;
+    width:100%;
     }
 
       /**************************************************************
-*clase cabecero para alinear con cabecero de contenedor pequeño
+*aplico clase para llevar hasta el final del contenedor las imagenes que tienen estra clase
 ****************************************************************/
-.cabecero{
-  padding: 2em;
-  margin-top:2em;
 
+.final1{
+  width: 102%;
 }
-
+.final {
+  width: 100%;
+  margin-left: 0.5em;
+}
+.barraNavegacion1{
+ 
+    padding-top: 1.5em;
+    padding-left: 0;
+    padding-bottom: 1em;
+    
+}
  /**************************************************************
 * doy un padding para tener bien situado el menú  de nav del contenedor pequeño
-***************************************************************/
- .barraNavegacion1{
-  padding: 1em;
-  }
-  /**************************************************************
-*doy valores a cabecera1 del contennedor pequeño para alinear con cabecera del contenedor principal
-***************************************************************/
-.cabecero1{
-  justify-content:center;
-  height: 5em;
-  margin-top: -1em;
-}
+**************************************************************/
+
+ 
+
 /**************************************************************
 *tamaño y color para los enlaces del menú de contendedor pequeño
 ***************************************************************/
@@ -399,17 +460,97 @@ ajusto márgenes y le pongo a sus elementos en columna
   font-size: calc(0.60em + 0.60vw);
   color:rgb(94, 48, 94);
   text-decoration:none;
+  margin-left: 10%;
 }
-.titulos{
-  padding: 0.2em;
-  border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(94, 48, 94);
-   width:90%;
+ .menu{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+
  }
+ .barraNavegacion {
+  display: flex;
+  flex-direction: column;
+  
+
+}
+a.video,a.politecnico{
+  margin-left: 0;
+  color:rgb(94, 48, 94);
+  padding: 0.5em;
+}
+/* para dar formato a estos enlaces hay que asignar primero la etiqueta enlace y después el elemento
+para quietar el subrayado que tiene por defecto el enlace , darle fromato de letra y color*/
+a.video,a.politecnico{
+  text-decoration: none;
+  font: italic small-caps bold 25px/15px Georgia;
+  font-size: calc(0.45em + 0.45vw);
+  color:rgb(94, 48, 94);
+}
+
+ .trabajosPrincipal{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  width:100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  
+ }
+ /*eñl grupo tiene las fotos  en fila y no pueden pasar de ésta*/
+ .grupo1 {
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+ }
+ 
+ a{display:flex;
+width: 33%;}
+ /*contiene los titulos y no pueden pasar de su fila el contenedor es flex
+   tiene sus dos contenedores en columna*/
+
+ .trabajosPrincipal1{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ 
+}
+
+ 
+/* los contenedores columna son flex y sus hijos están en columna y éstas columnas están al centro*/
+ .columnas{
+   display: flex;
+   flex-direction: column;
+   margin-left:0.3em;
+ }
+ columnas a img{
+   width: 75%;
+ }
+/*tamaño del 100% de las imagenes de contenedor pequeño*/
+ .trab{
+  width: 10em;
+ 
+ }
+
+ 
+.piePequeño{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+/*************************************************************
+*doy valores a cabecera1 del contennedor pequeño para alinear con cabecera del contenedor principal
+***************************************************************/
+.cabecero1{
+  justify-content:center;
+  height: 5em;
+  margin-top: 2em;
+}
 
   }
 
  
   
-
 
