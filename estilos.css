@@ -418,7 +418,8 @@ ajusto márgenes y le pongo a sus elementos en columna
       width: 22%;
     
      margin-right: 2em;
-     
+ 
+    
     }
     /**************************************************************
 *el contenedor principal comparte escenario , ocupa un 70% de ancho del contenedor grnade
@@ -546,7 +547,7 @@ width: 33%;}
 .cabecero1{
   justify-content:center;
   height: 5em;
-  margin-top: 2em;
+  
 }
 
   }
