@@ -374,6 +374,7 @@ width: 105%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    width: 100%;
    }
   
 
@@ -397,6 +398,10 @@ width: 105%;
    width: 50%;
   
   }
+ 
+ .titulos{
+  width: 50%;
+}
  
 
   }
@@ -549,6 +554,12 @@ width: 33%;}
   height: 5em;
   
 }
+.titulosP{
+  width: 100%;
+}
+ .titulos{
+  width:  50%;
+ }
 
   }
 
